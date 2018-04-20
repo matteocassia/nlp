@@ -3,15 +3,6 @@ from nlp.dataset import Dataset, ClassDataset
 from nlp.document import ClassDocument
 
 
-documents = [
-    ClassDocument("A positive document", "+"),
-    ClassDocument("Another positive document", "+"),
-    ClassDocument("Yet one more positive document", "+"),
-    ClassDocument("This time a negative one", "-"),
-    ClassDocument("Still negative", "-")
-]
-
-
 class TestDataset(unittest.TestCase):
 
     def test_get_documents_by_class(self):
@@ -23,6 +14,13 @@ class TestDataset(unittest.TestCase):
         self.assertEqual(documents_by_class, expected_documents_by_class)
 
     def test_get_minimum_class_count(self):
+        documents = [
+            ClassDocument("A positive document", "+"),
+            ClassDocument("Another positive document", "+"),
+            ClassDocument("Yet one more positive document", "+"),
+            ClassDocument("This time a negative one", "-"),
+            ClassDocument("Still negative", "-")
+        ]
         documents_by_class = {
             "+": [documents[0], documents[1], documents[2]],
             "-": [documents[3], documents[4]]
