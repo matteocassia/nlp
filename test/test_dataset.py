@@ -6,6 +6,13 @@ from nlp.document import ClassDocument
 class TestDataset(unittest.TestCase):
 
     def test_get_documents_by_class(self):
+        documents = [
+            ClassDocument("A positive document", "+"),
+            ClassDocument("Another positive document", "+"),
+            ClassDocument("Yet one more positive document", "+"),
+            ClassDocument("This time a negative one", "-"),
+            ClassDocument("Still negative", "-")
+        ]
         documents_by_class = Dataset.get_documents_by_class(documents)
         expected_documents_by_class = {
             "+": [documents[0], documents[1], documents[2]],
@@ -30,6 +37,13 @@ class TestDataset(unittest.TestCase):
         self.assertEqual(minimum_class_count, expected_minimum_class_count)
 
     def test_get_normalised_documents(self):
+        documents = [
+            ClassDocument("A positive document", "+"),
+            ClassDocument("Another positive document", "+"),
+            ClassDocument("Yet one more positive document", "+"),
+            ClassDocument("This time a negative one", "-"),
+            ClassDocument("Still negative", "-")
+        ]
         normalised_documents = ClassDataset.get_normalised_documents(documents)
         expected_normalised_documents = [documents[0], documents[1], documents[3], documents[4]]
         self.assertEqual(normalised_documents, expected_normalised_documents)
