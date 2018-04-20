@@ -1,6 +1,6 @@
 import unittest
-from src.dataset import Dataset, ClassDataset
-from src.document import ClassDocument
+from nlp.dataset import Dataset, ClassDataset
+from nlp.document import ClassDocument
 
 
 documents = [

@@ -1,6 +1,6 @@
 import unittest
-from src.document import ClassDocument
-from src.id3 import ID3
+from nlp.document import ClassDocument
+from nlp.id3 import ID3
 from math import log
 
 

@@ -1,5 +1,5 @@
 import unittest
-from src.document import Document
+from nlp.document import Document
 
 
 class TestDocument(unittest.TestCase):

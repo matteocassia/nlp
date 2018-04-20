@@ -1,6 +1,6 @@
 import unittest
-from src.term_document_matrix import TermDocumentMatrix
-from src.document import Document
+from nlp.term_document_matrix import TermDocumentMatrix
+from nlp.document import Document
 from math import log
 
 

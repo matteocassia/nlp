@@ -1,5 +1,5 @@
 import unittest
-from src.utilities import ConfusionMatrix
+from nlp.utilities import ConfusionMatrix
 
 
 class TestConfusionMatrix(unittest.TestCase):

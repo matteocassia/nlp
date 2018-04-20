@@ -1,7 +1,7 @@
 import unittest
 from math import sqrt
-from src.knn import KNN
-from src.document import ClassDocument
+from nlp.knn import KNN
+from nlp.document import ClassDocument
 
 
 class TestKNN(unittest.TestCase):

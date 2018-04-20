@@ -1,6 +1,6 @@
 import unittest
-from src.document import ClassDocument
-from src.naive_bayes import NaiveBayes
+from nlp.document import ClassDocument
+from nlp.naive_bayes import NaiveBayes
 from math import log
 
 
