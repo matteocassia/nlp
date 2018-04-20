@@ -18,12 +18,11 @@ $ sudo pip3 install numpy
 ```
 To clone this repository:
 ```
-$ git clone git@github.com:matteocassia/nlp.git
+$ mkdir project
+$ git clone git@github.com:matteocassia/nlp.git project/
+$ cd project/
 ```
-Most command-line functionalities in this repository expect the current directory to be the root of this project, so it is advised to navigate into it.
-```
-$ cd nlp
-```
+Most command-line functionalities in this repository expect the current directory to be the root of this project, so navigating into `project` is highly recommended.
 ## Using the Code
 This section covers the basics of how to use and test the code in this repository. A set of command-line tools have been developed to perform the tasks of this project.
 ### Registering a Dataset
