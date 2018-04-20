@@ -32,17 +32,17 @@ In order to add a dataset to be used for any task, it needs to be registered. Th
 ### Classification with Cross-Validation
 To perform k-fold cross-validation, navigate to the root of the project and use the command:
 ```
-$ python3 -m nlp.cross_validation <folds> <dataset> <classifier> [<classifier_options>]
+$ python3 -m nlp.cross_validator <folds> <dataset> <classifier> [<classifier_options>]
 ```
 where `folds` is the integer for the number of folds, `dataset` is the name used to register the required dataset and `classifier` is one of `naive_bayes`, `knn` and `id3`. Should the classifier be KNN, an additional argument is required for the number of neighbours.
 
 For example, to perform 10-fold cross-validation on the automotive dataset with the Naïve Bayes classifier, the command would be:
 ```
-$ python3 -m nlp.cross_validation 10 automotive naive_bayes
+$ python3 -m nlp.cross_validator 10 automotive naive_bayes
 ```
 To perform 3-fold cross-validation on the `musical_instruments` dataset with KNN for 7 neighbours, the command would be:
 ```
-$ python3 -m nlp.cross_validation 3 musical_instruments knn 7
+$ python3 -m nlp.cross_validator 3 musical_instruments knn 7
 ```
 ### Summarisation with Latent Semantic Analysis
 To extract the `k` top keywords for the strongest `n` topics in a dataset, the command is:
